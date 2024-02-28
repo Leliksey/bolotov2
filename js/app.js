@@ -70,7 +70,7 @@ $(document).ready(function () {
     $(".addReview").hide();
     $(".overlay").hide();
   });
-  $(".add_rev").click(function () {
+  $("#btn__add").click(function () {
     $(".addReview").show();
     $(".overlay").show();
   });
@@ -158,10 +158,10 @@ $(document).ready(function () {
         
         return;
     }
-    localStorage.setItem('rev_name', rev_name)
-    localStorage.setItem('rev_phone', rev_phone)
-    localStorage.setItem('rev_email', rev_email)
-    localStorage.setItem('rev_rev', rev_rev)
+    // localStorage.setItem('rev_name', rev_name)
+    // localStorage.setItem('rev_phone', rev_phone)
+    // localStorage.setItem('rev_email', rev_email)
+    // localStorage.setItem('rev_rev', rev_rev)
     // Если все поля заполнены, можно отправить форму
     this.submit();
    });
@@ -172,11 +172,11 @@ $(document).ready(function () {
   });
 
   
-  $(".reviews__item_custom .reviews__quote").text(localStorage.getItem("rev_phone"));
-  $(".reviews__item_custom .reviews__date").text(currentDate.getDate());
-  $(".reviews__item_custom .reviews__name").text(localStorage.getItem("rev_name"));
-  $(".reviews__item_custom .reviews__quote").text(localStorage.getItem("rev_rev"));
-  $(".reviews__item_custom .reviews__avatar img").attr("src", "images/ava1.png");
+  // $(".reviews__item_custom .reviews__quote").text(localStorage.getItem("rev_phone"));
+  // $(".reviews__item_custom .reviews__date").text(currentDate.getDate());
+  // $(".reviews__item_custom .reviews__name").text(localStorage.getItem("rev_name"));
+  // $(".reviews__item_custom .reviews__quote").text(localStorage.getItem("rev_rev"));
+  // $(".reviews__item_custom .reviews__avatar img").attr("src", "images/ava1.png");
 
 
   $(".reviews__link").click(function() {

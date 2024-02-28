@@ -179,12 +179,12 @@
                             <p>Великий ученый и исследователь в области долголетия и здорового образа жизни. Его работа посвящена разработке методик, которые помогают людям жить дольше и здоровее. На протяжении более чем пятидесяти лет академик Болотов изучал, как процессы старения и болезни можно замедлить или даже обратить вспять, используя естественные подходы и изменения в образе жизни.</p>
                             <p>Его теории и практические рекомендации привлекли тысячи последователей по всему миру. Благодаря своему глубокому пониманию биологии человека и физиологии, Болотов смог разработать уникальные методы омоложения и улучшения здоровья, которые оказались эффективными для многих.</p>
                         </div>
-                        <div class="bio__quote">“...я
+                        <!--<div class="bio__quote">“...я
                             попытался дать вам основную суть моих взглядов и
                             надеюсь, что применяя их практически, вы сами сможете
                             ощутить их действенность...”
                             <img src="images/signature.svg" alt="signature" class="bio__quote_img">
-                        </div>
+                        </div>-->
                     </div>
                     <div class="bio__img">
                         <img src="images/bolotov.png" alt="bolotov">
@@ -283,7 +283,7 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="customButton customButton_transparent add_rev">Оставить отзыв</button>
+            <button type="button" class="btn_tr" id="btn__add">Оставить отзыв</button>
         </section>
         <section class="form" id="form">
             <div class="sectionTitle">Получите свой путь к долголетию</div>
@@ -293,18 +293,15 @@
                     <img src="images/book.png" alt="book">
                 </div>
                 <form action="#" method="post" name="form">
-                    <h2 class="text main__text_gaid">Получить гайд за <span class="main__text_price">20€</span>
-                        <!--<span class="main__text_free">Бесплатно</span></h2>-->
-                    <h3 class="text main__akciya">Акция дейстует до <span class="date">10.02</span></h3>
+                    <h2 class="text main__text_gaid">Получить гайд за<span class="main__text_price">20€</span>
+                    <span class="main__text_free">Бесплатно</span></h2>
+                    <h3 class="text main__akciya">До конца акции осталось: <span class="date">10.02</span></h3>
                     <div class="form__inputs">
                         <input type="text" placeholder="Ваше Имя" name="name">
                         <input type="tel" placeholder="Ваш Tелефон" name="phone">
                         <input type="email" placeholder="Ваш Email" name="email">
                         <button type="submit" class="customButton" href="#form">
                             Скачать бесплатно
-                            <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 17H13.5M7.5 1V13M7.5 13L11 9.5M7.5 13L4 9.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
                         </button>
                     </div>
                 </form>
@@ -354,8 +351,8 @@
                         <!--<input type="file" name="" id="" class="addReview__add-file_hidden">-->
                     </div>
                     <div class="addReview__btns">
-                        <button type="button" class="customButton customButton_transparent close_popup">Отменить</button>
-                        <button type="submit" class="customButton">Оставить отзыв</button>
+                        <button type="button" class="btn_tr close_popup">Отменить</button>
+                        <button type="submit" class="btn_tr btn_tr-fill">Оставить отзыв</button>
                     </div>
                 </form>
             </div>

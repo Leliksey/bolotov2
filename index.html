@@ -64,7 +64,29 @@
                     <div class="main__content">
                         <div class="main__info">
                             <h2 class="text main__sectionTitle">Получить гайд за <span class="main__text_price">20€</span><span class="main__text_free">Бесплатно</span></h2>
-                            <h3 class="text main__akciya">До конца акции осталось: <span class="date">10.02</span></h3>
+                            <div class="progress-bar">
+                                <div class="progress" id="progress"></div>
+                              </div>
+                            <h3 class="text main__akciya">До конца акции осталось: 
+                                <div id="timer">
+                                    <div class="timer__group">
+                                        <span id="days" class="numVal"></span>
+                                        <span class="numText">дней</span>
+                                    </div>
+                                    <div class="timer__group">
+                                        <span id="hours" class="numVal"></span>
+                                        <span class="numText">часов</span> 
+                                    </div>
+                                    <div class="timer__group">
+                                        <span id="minutes" class="numVal"></span>
+                                        <span class="numText">минут</span> 
+                                    </div>
+                                    <div class="timer__group">
+                                        <span id="seconds" class="numVal"></span>
+                                        <span class="numText">секунд</span> 
+                                    </div>
+                                </div>
+                            </h3>
                             <img class="main__img main__img_mobile" src="images/main_img_mobile.png" alt="">
                             <!--<div class="btnGroup">
                                 <a class="customButton" href="#form">

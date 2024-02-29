@@ -187,4 +187,62 @@ $(document).ready(function () {
     $(".overlay").hide();
     $(".reviewOpen").hide();
   });
+
+  
+
+
+
+
+
+
+
+
+
+  // Функция обновления таймера и прогресса
+function updateTimer() {
+  var now = new Date();
+  var timeLeft = endDate - now;
+
+  var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+
+  // Обновляем прогресс полоски
+  var totalTime = endDate - startDate; // Общее время акции
+  var progress = Math.max(0, Math.min(1, timeLeft / totalTime)); // Прогресс в диапазоне от 0 до 1
+  var progressBar = document.getElementById("progress");
+  progressBar.style.width = (progress * 80) + "%"; // Установка ширины в процентах
+
+  if (timeLeft < 0) {
+      clearInterval(timerInterval);
+      document.getElementById("timer").textContent = "Акция закончилась!";
+  }
+}
+
+// Запуск таймера
+var timerInterval = setInterval(updateTimer, 1000);
+
+// Получаем текущую дату и время
+var currentDate = new Date();
+
+// Добавляем 12 часов к текущему времени
+// var endDate = new Date(currentDate.getTime() + 12 * 60 * 60 * 1000);
+var startDate = new Date(currentDate.getTime() - (12 * 60 * 60 * 1000 + 10 * 1000));
+
+// Получаем начальную дату, это текущее время минус разница во времени, которая осталась до окончания акции
+// var startDate = new Date(endDate.getTime() - 12 * 60 * 60 * 1000);
+var endDate = new Date(currentDate.getTime() + 12 * 60 * 60 * 1000);
+
+// Сразу вызываем функцию, чтобы избежать задержки отображения таймера и прогресса
+updateTimer();
+
+
+  
+
 });
